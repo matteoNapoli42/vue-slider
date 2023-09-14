@@ -41,14 +41,6 @@ const { createApp } = Vue
                 }
             
             ],
-
-        thumbs : [
-            'img/01.webp' ,
-            'img/02.webp' ,
-            'img/03.webp' ,
-            'img/04.webp' ,
-            'img/05.webp' ,
-        ]
         }
     },
     
@@ -61,6 +53,7 @@ const { createApp } = Vue
             this.currentSlide = max;
         else
             this.currentSlide--;
+       this.activeThumb.isActive();
       },
       slideNext : function(){
         console.log("sei qui next");
@@ -70,8 +63,9 @@ const { createApp } = Vue
             this.currentSlide = 0;
         else
             this.currentSlide++;
+        this.activeThumb.isActive();
       },
-     
+
     }
   }).mount('#app')
 
