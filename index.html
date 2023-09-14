@@ -29,14 +29,10 @@
                 <div class="thumbs">
                     <div class="prev" @click="slidePrev"></div>
                     <div class="next" @click="slideNext"></div>
-                    <div class="thumb"  v-for="slide in slides" >
+                    <div class="thumb"  v-for="(slide,index) in slides" :class="{active : currentSlide === index}">
                         <img :src="slide.image" alt="Spiderman" />
                     </div>
-                    
-
-                   
                 </div>
-
             </div>
         </div>
 
